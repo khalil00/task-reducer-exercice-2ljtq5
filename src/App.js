@@ -19,7 +19,7 @@ export default function TaskApp() {
       
     } else if (action.type === 'changeTask') {
       return state.map((val) => {
-        if (val.id === action.task.id) val.done = action.task.done;
+        if (val.id === action.task.id) return action.task;
         return val;
       });
 
